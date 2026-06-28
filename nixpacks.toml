@@ -1,5 +1,8 @@
+[phases.setup]
+nixPkgs = ["python311"]
+
 [phases.install]
 cmds = ["pip install -r requirements.txt"]
 
 [start]
-cmd = "streamlit run ui.py --server.port=$PORT --server.address=0.0.0.0"
+cmd = "python -m streamlit run ui.py --server.port=$PORT --server.address=0.0.0.0"
